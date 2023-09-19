@@ -1,0 +1,91 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header header" "div div";
+}
+
+header {
+  grid-area: header;
+}
+
+.item {
+  grid-area: div;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header header" "information foto" "tools tools" "projects projects" "footer footer";
+}
+
+.information {
+  grid-area: information;
+  background-color: bisque;
+}
+
+.foto {
+  grid-area: foto;
+  background-color: aquamarine;
+}
+.foto img {
+  object-fit: contain;
+  height: 300px;
+}
+
+.tools {
+  grid-area: tools;
+  background-color: rgb(42, 228, 228);
+}
+.tools .cards-tools-container {
+  display: flex;
+  gap: 10px;
+}
+.tools article {
+  border: 1px solid white;
+  border-radius: 12px;
+  height: 170px;
+  width: 170px;
+}
+.tools article h3 {
+  font-size: 16px;
+  text-align: center;
+  border-top: 1px solid white;
+}
+.tools img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.projects {
+  grid-area: projects;
+  background-color: rgb(255, 162, 243);
+}
+.projects .projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+.projects .project-card {
+  width: 350px;
+  height: 480px;
+  border: 1px solid white;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(255, 241, 152);
+}
+.footer ul {
+  list-style: none;
+}
+.footer a {
+  display: flex;
+  gap: 20px;
+}
+.footer img {
+  width: 30px;
+  height: 30px;
+}
+
+/*# sourceMappingURL=styles.css.map */
