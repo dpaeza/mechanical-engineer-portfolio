@@ -1,6 +1,15 @@
+$primary: #e3e6e0;
+$secondary: #010101;
+$tertiary: #d8a21e;
+
+// $section-weight: 
 
 body{
     display: grid;
+    background-color: $primary;
+    color: $secondary;
+    padding: 0px 5%;
+    font-family: 'Roboto', sans-serif;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:
@@ -20,19 +29,43 @@ header{
     grid-template-areas:
         "header header"
         "information foto"
+        "sobreMi sobreMi"
         "tools tools"
         "projects projects"
         "footer footer";
 }
 
+.sobre-mi{
+    grid-area: sobreMi;
+    padding-top: 80px;
+
+    h3 {
+        text-align: center;
+        font-weight: 400;
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+}
+
 .information{
     grid-area: information;
-    background-color: bisque;
+    padding-top: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1{
+        font-family: 'Bebas Neue', sans-serif;
+        color: $secondary;
+        letter-spacing: 7px;
+        font-size: 70px;
+    }
 }
 
 .foto{
     grid-area: foto;
-    background-color: aquamarine;
+    padding-top: 100px;
 
     img{
         object-fit: contain;
@@ -42,23 +75,34 @@ header{
 
 .tools{
     grid-area: tools;
-    background-color: rgb(42, 228, 228);
+    padding-top: 80px;
+
+    h3 {
+        text-align: center;
+        font-weight: 400;
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
 
     .cards-tools-container{
         display: flex;
-        gap: 10px;
+        gap: 30px;
     }
 
     article{
-        border: 1px solid white;
+        border: 1px solid $secondary;
         border-radius: 12px;
         height: 170px;
         width: 170px;
+        padding: 7px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
-        h3{
+        h4{
             font-size: 16px;
             text-align: center;
-            border-top: 1px solid white;
+            border-top: 1px solid $secondary;
         }
     }
 
@@ -70,7 +114,6 @@ header{
 
 .projects{
     grid-area: projects;
-    background-color: rgb(255, 162, 243);
 
     .projects-container{
         display: grid;
@@ -89,7 +132,6 @@ header{
 
 .footer{
     grid-area: footer;
-    background-color: rgb(255, 241, 152);
 
     ul{
         list-style: none;
@@ -105,3 +147,25 @@ header{
         height: 30px;
     }
 } 
+
+.bg-body-tertiary {
+    background-color: $tertiary !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: $secondary !important;
+}
+
+.nav {
+    --bs-nav-link-color: $secondary;
+}
+
+.navbar{
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+}
+
+.navbar-brand {
+    color: $secondary;
+    font-family: 'Bebas Neue', sans-serif !important;
+}

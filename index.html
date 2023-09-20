@@ -9,19 +9,23 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles/styles.css" />
     <title>Camilo Lyons</title>
   </head>
   <body>
     <header class="item">
-      <nav
-        id="navbar-example2"
-        class="navbar bg-body-tertiary px-3 mb-3 fixed-top"
-      >
+      <nav id="navbar-example2" class="navbar bg-body-tertiary mb-3 fixed-top">
         <a class="navbar-brand" href="#">Camilo Lyons</a>
         <ul class="nav nav-pills">
           <li class="nav-item">
             <a class="nav-link" href="#information">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sobreMi">Sobre mi</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#herramientas">Herramientas</a>
@@ -45,6 +49,15 @@
     >
       <section class="information" id="information">
         <h1>Camilo Lyons</h1>
+        <h2>Ingeniero Mecánico</h2>
+      </section>
+      <section class="foto">
+        <figure>
+          <img src="./assets/jimmy-neutron.png" alt="Camilo-Foto" />
+        </figure>
+      </section>
+      <section class="sobre-mi" id="sobreMi">
+        <h3>Sobre Mi</h3>
         <p>
           <span>Ingeniero Mecánico</span> con experiencia en planificación,
           control, revisión y codificación documentaria, enfocado en proyectos
@@ -69,31 +82,26 @@
           desarrollo continuo de mis habilidades profesionales.
         </p>
       </section>
-      <section class="foto">
-        <figure>
-          <img src="./assets/jimmy-neutron.png" alt="Camilo-Foto" />
-        </figure>
-      </section>
       <section class="tools" id="herramientas">
-        <h2>Herramientas</h2>
+        <h3>Herramientas</h3>
         <div class="cards-tools-container">
           <article>
             <figure>
               <img src="./assets/SolidWorks-logo.png" alt="SolidWorks-logo" />
             </figure>
-            <h3>SolidWorks</h3>
+            <h4>SolidWorks</h4>
           </article>
           <article>
             <figure>
               <img src="./assets/AutoCAD-logо.png" alt="AutoCAD-logо" />
             </figure>
-            <h3>AutoCAD</h3>
+            <h4>AutoCAD</h4>
           </article>
           <article>
             <figure>
               <img src="./assets/excel.png" alt="Excel-logo" />
             </figure>
-            <h3>Microsoft Excel</h3>
+            <h4>Microsoft Excel</h4>
           </article>
         </div>
       </section>

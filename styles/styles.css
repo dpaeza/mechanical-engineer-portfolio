@@ -1,5 +1,9 @@
 body {
   display: grid;
+  background-color: #e3e6e0;
+  color: #010101;
+  padding: 0px 5%;
+  font-family: "Roboto", sans-serif;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
   grid-template-areas: "header header" "div div";
@@ -14,17 +18,38 @@ header {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto auto auto;
-  grid-template-areas: "header header" "information foto" "tools tools" "projects projects" "footer footer";
+  grid-template-areas: "header header" "information foto" "sobreMi sobreMi" "tools tools" "projects projects" "footer footer";
+}
+
+.sobre-mi {
+  grid-area: sobreMi;
+  padding-top: 80px;
+}
+.sobre-mi h3 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 30px;
+  margin-bottom: 40px;
 }
 
 .information {
   grid-area: information;
-  background-color: bisque;
+  padding-top: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.information h1 {
+  font-family: "Bebas Neue", sans-serif;
+  color: #010101;
+  letter-spacing: 7px;
+  font-size: 70px;
 }
 
 .foto {
   grid-area: foto;
-  background-color: aquamarine;
+  padding-top: 100px;
 }
 .foto img {
   object-fit: contain;
@@ -33,22 +58,32 @@ header {
 
 .tools {
   grid-area: tools;
-  background-color: rgb(42, 228, 228);
+  padding-top: 80px;
+}
+.tools h3 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 30px;
+  margin-bottom: 40px;
 }
 .tools .cards-tools-container {
   display: flex;
-  gap: 10px;
+  gap: 30px;
 }
 .tools article {
-  border: 1px solid white;
+  border: 1px solid #010101;
   border-radius: 12px;
   height: 170px;
   width: 170px;
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.tools article h3 {
+.tools article h4 {
   font-size: 16px;
   text-align: center;
-  border-top: 1px solid white;
+  border-top: 1px solid #010101;
 }
 .tools img {
   width: 100%;
@@ -57,7 +92,6 @@ header {
 
 .projects {
   grid-area: projects;
-  background-color: rgb(255, 162, 243);
 }
 .projects .projects-container {
   display: grid;
@@ -74,7 +108,6 @@ header {
 
 .footer {
   grid-area: footer;
-  background-color: rgb(255, 241, 152);
 }
 .footer ul {
   list-style: none;
@@ -86,6 +119,28 @@ header {
 .footer img {
   width: 30px;
   height: 30px;
+}
+
+.bg-body-tertiary {
+  background-color: #d8a21e !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background-color: #010101 !important;
+}
+
+.nav {
+  --bs-nav-link-color: $secondary;
+}
+
+.navbar {
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+}
+
+.navbar-brand {
+  color: #010101;
+  font-family: "Bebas Neue", sans-serif !important;
 }
 
 /*# sourceMappingURL=styles.css.map */
