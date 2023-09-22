@@ -33,10 +33,11 @@ header {
   position: relative;
 }
 .inicio h1 {
-  font-family: "Gloock", serif;
+  font-family: "Passion One", cursive;
   color: #FBFDFC;
   letter-spacing: 7px;
   font-size: 70px;
+  font-weight: 400;
 }
 
 .sobre-mi {
