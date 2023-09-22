@@ -232,6 +232,10 @@ header {
   color: #FBFDFC !important;
 }
 
+.modal-title {
+  color: #1b1c22 !important;
+}
+
 @media screen and (max-width: 991px) {
   .nav {
     flex-direction: column !important;

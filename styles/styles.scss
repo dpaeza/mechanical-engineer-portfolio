@@ -273,6 +273,10 @@ header{
     color: $secondary !important;
 }
 
+.modal-title {
+    color: $letter-black !important;
+}
+
 
 @media screen and (max-width: 991px) {
     .nav {
