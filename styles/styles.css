@@ -48,10 +48,15 @@ header {
   gap: 30px;
   align-items: center;
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
 }
-.sobre-mi img {
-  height: 250px;
+.sobre-mi .img {
   object-fit: contain;
+  max-width: 100%;
+  height: auto;
 }
 .sobre-mi h2 {
   font-family: "Bebas Neue", sans-serif;
@@ -89,6 +94,12 @@ header {
 .sobre-mi .div {
   display: flex;
   gap: 50px;
+}
+.sobre-mi .up {
+  position: absolute;
+  top: -40px;
+  right: 3%;
+  height: 250px;
 }
 
 .tools {
@@ -253,6 +264,19 @@ header {
   }
   .nav-link {
     color: #1b1c22 !important;
+  }
+  .sobre-mi {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+  .sobre-mi .img {
+    display: none;
+  }
+}
+@media screen and (max-width: 580px) {
+  .sobre-mi .div {
+    flex-direction: column;
+    gap: 0px;
   }
 }
 @media screen and (min-width: 992px) {
