@@ -1,8 +1,6 @@
 body {
   display: grid;
-  background-color: #e3e6e0;
-  color: #010101;
-  padding: 0px 5%;
+  color: #FBFDFC;
   font-family: "Roboto", sans-serif;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
@@ -18,129 +16,246 @@ header {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto auto auto;
-  grid-template-areas: "header header" "information foto" "sobreMi sobreMi" "tools tools" "projects projects" "footer footer";
+  grid-template-areas: "header header" "foto foto" "information information" "sobreMi sobreMi" "projects projects" "tools tools" "footer footer";
 }
 
-.sobre-mi {
-  grid-area: sobreMi;
-  padding-top: 80px;
-}
-.sobre-mi h3 {
-  text-align: center;
-  font-weight: 400;
-  font-size: 30px;
-  margin-bottom: 40px;
-}
-
-.information {
-  grid-area: information;
-  padding-top: 100px;
+.inicio {
+  grid-area: foto;
+  height: 100vh;
+  padding-top: 50px;
+  background-image: url("../assets/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
-.information h1 {
+.inicio h1 {
   font-family: "Bebas Neue", sans-serif;
-  color: #010101;
+  color: #FBFDFC;
   letter-spacing: 7px;
   font-size: 70px;
 }
 
-.foto {
-  grid-area: foto;
-  padding-top: 100px;
+.sobre-mi {
+  grid-area: sobreMi;
+  padding: 80px 3%;
+  background-color: #FBFDFC;
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
-.foto img {
+.sobre-mi img {
+  height: 250px;
   object-fit: contain;
-  height: 300px;
+}
+.sobre-mi h2 {
+  font-family: "Bebas Neue", sans-serif;
+  color: #1b1c22;
+  letter-spacing: 3px;
+}
+.sobre-mi h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+  color: #1b1c22;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+}
+.sobre-mi span {
+  font-style: italic;
+}
+.sobre-mi .grey-p {
+  color: #a3a4a6;
+  padding-left: 5%;
+  text-align: justify;
+  font-size: 16px;
+}
+.sobre-mi .strong-p {
+  color: #1b1c22;
+  text-align: right;
+  font-weight: 700;
 }
 
 .tools {
   grid-area: tools;
-  padding-top: 80px;
+  padding: 80px 3% 200px;
+  background-color: #a3a4a6;
+  position: relative;
 }
 .tools h3 {
-  text-align: center;
-  font-weight: 400;
-  font-size: 30px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 40px;
+  color: #1b1c22;
+  letter-spacing: 3px;
   margin-bottom: 40px;
+  text-align: center;
 }
 .tools .cards-tools-container {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
+  margin-top: 80px;
 }
 .tools article {
-  border: 1px solid #010101;
-  border-radius: 12px;
-  height: 170px;
-  width: 170px;
   padding: 7px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: center;
 }
 .tools article h4 {
   font-size: 16px;
   text-align: center;
-  border-top: 1px solid #010101;
+  font-weight: 700;
+  color: #1b1c22;
+  margin-top: 30px;
 }
 .tools img {
-  width: 100%;
+  height: 50px;
   object-fit: contain;
 }
 
 .projects {
   grid-area: projects;
+  padding: 80px 3%;
+  background-color: #252c36;
+}
+.projects h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 40px;
+  color: #FBFDFC;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.projects h3 {
+  color: #1b1c22;
+  font-size: 20px;
+  padding: 5% 0 0 5%;
 }
 .projects .projects-container {
+  padding-top: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
 }
 .projects .project-card {
-  width: 350px;
-  height: 480px;
-  border: 1px solid white;
+  width: 300px;
+  height: 380px;
+  background-color: #FBFDFC;
   border-radius: 12px;
   margin: 0 auto;
+}
+.projects img {
+  border-radius: 12px 12px 0 0;
+}
+.projects p {
+  color: #a3a4a6;
+  padding-left: 5%;
+  font-size: 16px;
 }
 
 .footer {
   grid-area: footer;
+  padding: 10px 3%;
+  background-color: #252c36;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .footer ul {
   list-style: none;
-}
-.footer a {
   display: flex;
   gap: 20px;
+  height: 40px;
 }
 .footer img {
   width: 30px;
   height: 30px;
+  transition: all 0.4s ease-in-out;
+}
+.footer img:hover {
+  height: 40px;
+  width: 40px;
+}
+.footer div {
+  display: flex;
+  gap: 20px;
 }
 
 .bg-body-tertiary {
-  background-color: #d8a21e !important;
+  background-color: #252c36 !important;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  background-color: #010101 !important;
+  background-color: #a3a4a6 !important;
+}
+
+.nav-pills {
+  --bs-nav-pills-link-active-bg: $secondary !important;
 }
 
 .nav {
-  --bs-nav-link-color: $secondary;
+  --bs-nav-link-color: $secondary !important;
+  --bs-nav-link-hover-color: $secondary !important;
 }
 
 .navbar {
-  padding-left: 5% !important;
-  padding-right: 5% !important;
+  padding-left: 3% !important;
+  padding-right: 3% !important;
 }
 
 .navbar-brand {
-  color: #010101;
+  color: #FBFDFC;
   font-family: "Bebas Neue", sans-serif !important;
+}
+
+.custom-shape-divider-bottom-1695314119 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1695314119 svg {
+  position: relative;
+  display: block;
+  width: calc(129% + 1.3px);
+  height: 169px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1695314119 .shape-fill {
+  fill: #FBFDFC;
+}
+
+.custom-shape-divider-bottom-1695345814 {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1695345814 svg {
+  position: relative;
+  display: block;
+  width: calc(142% + 1.3px);
+  height: 95px;
+}
+
+.custom-shape-divider-bottom-1695345814 .shape-fill {
+  fill: #252C36;
 }
 
 /*# sourceMappingURL=styles.css.map */
