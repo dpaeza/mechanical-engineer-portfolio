@@ -66,12 +66,8 @@ header {
   letter-spacing: 3px;
   margin-bottom: 40px;
 }
-.sobre-mi span {
-  font-style: italic;
-}
 .sobre-mi .grey-p {
   color: #a3a4a6;
-  padding-left: 5%;
   text-align: justify;
   font-size: 16px;
 }
@@ -79,6 +75,20 @@ header {
   color: #1b1c22;
   text-align: right;
   font-weight: 700;
+}
+.sobre-mi .item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.sobre-mi .icon {
+  height: 40px;
+  width: 40px;
+}
+.sobre-mi .div {
+  display: flex;
+  gap: 50px;
 }
 
 .tools {

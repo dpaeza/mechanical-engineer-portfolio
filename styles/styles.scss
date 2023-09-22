@@ -88,13 +88,12 @@ header{
         margin-bottom: 40px;
     }
 
-    span{
-        font-style: italic;
-    }
+    // span{
+    //     font-style: italic;
+    // }
 
     .grey-p{
         color: $letter-grey;
-        padding-left: 5%;
         text-align: justify;
         font-size: 16px;
     }
@@ -103,6 +102,23 @@ header{
         color: $letter-black;
         text-align: right;
         font-weight: 700;
+    }
+
+    .item{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .icon{
+        height: 40px;
+        width: 40px;
+    }
+
+    .div{
+        display: flex;
+        gap: 50px;
     }
 }
 
