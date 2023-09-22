@@ -229,6 +229,9 @@ header{
     }
 } 
 
+
+// Bootstrap
+
 .bg-body-tertiary {
     background-color: $primary !important;
 }
@@ -249,6 +252,7 @@ header{
 .navbar{
     padding-left: 3% !important;
     padding-right: 3% !important;
+
 }
 
 .navbar-brand {
@@ -256,9 +260,46 @@ header{
     font-family: 'Gloock', serif !important;
 }
 
+.offcanvas-title {
+    font-family: 'Gloock', serif !important;
+}
+
+.navbar-toggler {
+    background-color: $secondary !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.nav-link {
+    color: $secondary !important;
+}
+
+
+@media screen and (max-width: 991px) {
+    .nav {
+      flex-direction: column !important;
+    }
+
+    .nav-link {
+        color: $letter-black !important;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    .navbar-expand-lg .offcanvas .offcanvas-body {
+        justify-content: flex-end !important;
+    }
+}
+
+
+// Waves
+
 .custom-shape-divider-bottom-1695314119 {
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
     left: 0;
     width: 100%;
     overflow: hidden;

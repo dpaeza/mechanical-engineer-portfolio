@@ -216,9 +216,38 @@ header {
   font-family: "Gloock", serif !important;
 }
 
+.offcanvas-title {
+  font-family: "Gloock", serif !important;
+}
+
+.navbar-toggler {
+  background-color: #FBFDFC !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.nav-link {
+  color: #FBFDFC !important;
+}
+
+@media screen and (max-width: 991px) {
+  .nav {
+    flex-direction: column !important;
+  }
+  .nav-link {
+    color: #1b1c22 !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .navbar-expand-lg .offcanvas .offcanvas-body {
+    justify-content: flex-end !important;
+  }
+}
 .custom-shape-divider-bottom-1695314119 {
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   width: 100%;
   overflow: hidden;
